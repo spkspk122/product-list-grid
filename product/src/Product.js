@@ -1,6 +1,5 @@
-import React,{useState} from 'react'
+import React from 'react'
 import './product.css'
-import { AiFillCaretDown } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 import {BsFillPersonFill } from "react-icons/bs"; 
 import {BsCart2 } from "react-icons/bs"
