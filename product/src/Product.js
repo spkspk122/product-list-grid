@@ -146,9 +146,9 @@ const handleclick = ()=>{
     NAME
   </button>
     <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Brand</a></li>
-    <li><a class="dropdown-item" href="#">shoe</a></li>
-    <li><a class="dropdown-item" href="#">Belt</a></li></ul></div>
+    <li><a class="dropdown-item" href="#">date</a></li>
+    <li><a class="dropdown-item" href="#">latest</a></li>
+    <li><a class="dropdown-item" href="#">high rating</a></li></ul></div>
     <p className='ea'>Show</p>
     <div class="btn-group">
   <button type="button" class="btn btn-Light button1 dropdown-toggle name "  data-bs-toggle="dropdown" aria-expanded="false">
