@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './product.css'
 import { AiFillCaretDown } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -26,13 +26,41 @@ import paypal from  './image/paypal.jpg';
 
 
 function Product() {
-  return (
+
+const handleclick = ()=>{
+   prompt('enter your info')
+    }
+    return (
     <div>
+      
        <div className='nav'> 
-            <label className='aa'>EN</label> 
-            <AiFillCaretDown size={30}/> 
-            <label className='ab'>USD</label> 
-            <AiFillCaretDown size={30}/> 
+       <div className='ab'>
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <ul class="navbar-nav">
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EN
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">India</a></li>
+            <li><a class="dropdown-item" href="#">USA</a></li>
+            <li><a class="dropdown-item" href="#">Uk</a></li>
+          </ul>
+        </li>
+        </ul>
+        <ul class="navbar-nav">
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle en " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            USD
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">INR</a></li>
+            <li><a class="dropdown-item" href="#">Pound</a></li>
+            <li><a class="dropdown-item" href="#">ERU</a></li>
+          </ul>
+        </li>
+        </ul>
+        </nav> </div>
             <label className='bc'></label> 
             < BsFillPersonFill size={30}/> 
             <label>My Profile</label> 
@@ -50,11 +78,11 @@ function Product() {
                 <label className='a1'></label> 
             <img src={ecom} width='50' height='50'/> 
            <label className='bc3'>E-Comm</label> 
-           <label className='bc4'>HOME</label> 
-           <label className='bc5'>BAGS</label> 
-           <label className='bc5'>SNEAKERS</label> 
-           <label className='bc5'>BELT</label> 
-           <label className='bc5'>CONTACT</label> 
+           <a href='#' className='bc4'>HOME</a> 
+           <a href='#' className='bc5'>BAGS</a> 
+           <a href='#' className='bc5' >SNEAKERS</a> 
+           <a href='#' className='bc5'>BELT</a> 
+           <a href='#' className='bc5'>CONTACT</a> 
            </div>
            </div>
        </nav>
@@ -97,7 +125,7 @@ function Product() {
           <p className='nike ' href='#'>Adidas <span className='no'>99</span></p>
           <p className='nike ' href='#'>Adidas <span className='no'>99</span></p>
           </div>
-          <button className='button'>More</button>
+          <button className='button'onClick={handleclick} >More</button>
           <div className='banner'>
             <h3 className='text'>Adidas Men Running</h3>
             <h3 className='text1'>Sneakers</h3>
@@ -107,76 +135,79 @@ function Product() {
             <div className='imgs'>
             <img className='img' src={shoe} alt='img'/>
             </div>
-          <div >
+          <div>
+           
           <nav className='na'>
             <div className='a'>
+              <div className='item-nav'>
             <p className='ea'>13 Items</p><br/>
             <p className='ea'>sort By</p>
-            <select className='ea' >
-    <option >Name</option>
-    </select>
+            <div class="btn-group">
+  <button type="button" class="btn btn-Light dropdown-toggle name " data-bs-toggle="dropdown" aria-expanded="false">
+    NAME
+  </button>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Brand</a></li>
+    <li><a class="dropdown-item" href="#">shoe</a></li>
+    <li><a class="dropdown-item" href="#">Belt</a></li></ul></div>
     <p className='ea'>Show</p>
-  <select>
-    <option className='ea'>13</option>
-  </select></div>
+    <div class="btn-group">
+  <button type="button" class="btn btn-Light button1 dropdown-toggle name "  data-bs-toggle="dropdown" aria-expanded="false">
+    13
+  </button>
+    <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">14</a></li>
+    <li><a class="dropdown-item" href="#">15</a></li>
+    <li><a class="dropdown-item" href="#">16</a></li></ul></div>
+    </div>
+  </div>
   <span><CgMenuGridR size={35} className="menu"/><HiMenu size={35} /></span>
-  
-    </nav>
+  </nav>
           </div>
           <div className='grid'>
             <div className='list-grid'>
-            <span><img className='im' src={p1} alt='nike'/><p className='h'>HOT</p></span>
+            <span><img className='im' src={p1} alt='nike'/>
+            
+            <p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span><br/><br/>
-  <div className='flex'>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
+  <div className='flex pt-3'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
           
           <div className='list-grid'>
             <span><img className='im' src={bag} alt='nike'/><p className='h'>HOT</p></span>
-            <p className='t'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
-  <br/><br/>
+            <p className='t1'>Nike Air Max 270 React</p>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
+ 
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
           <div className='list-grid'>
             <span><img className='im' src={bag1} alt='nike'/><p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
   <br/><br/>
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
@@ -184,81 +215,58 @@ function Product() {
           <div className='list-grid'>
             <span><img className='im' src={shoe2} alt='nike'/><p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
-  <br/><br/>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          
           <div className='list-grid'>
             <span><img className='im' src={shoe3} alt='nike'/><p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
-
-  <br/><br/>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
           <div className='list-grid'>
             <span><img className='im' src={shoe4} alt='nike'/><p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span><br/><br/>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
           <div className='list-grid'>
             <span><img className='im' src={shoe5} alt='nike'/><p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
-  <br/><br/>
-  <div className='flex'>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
+ <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
           
@@ -266,40 +274,28 @@ function Product() {
             <span><img className='im1' src={shoe5} alt='nike'/><p className='h'>HOT</p></span>
             <span className='ov'><BsSuitHeart size={30} className='heart' /><BsCart2 className='heart' size={30}/></span>
             <p className='t1'>Nike Air Max 270 React</p>
-          <p>
-          <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
-          </p>
-          <br/><br/>
+            <div class="d-flex justify-content-center">
+          <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>
           <div className='list-grid'>
             <span><img className='im' src={bag} alt='nike'/><p className='h'>HOT</p></span>
             <p className='t1'>Nike Air Max 270 React</p>
-            <span class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </span>
-  <br/><br/>
+            <div class="d-flex justify-content-center">
+            <svg width="124" height="16" viewBox="0 0 124 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M68.7921 6.33728L64.5406 9.85925L65.7914 15.5833L61.6604 12.1252L57.2634 15.3993L58.9622 9.73926L54.9961 6.03931L60.1766 5.99927L62.1232 0.438354L63.6264 6.07434L68.7921 6.33728Z" fill="#FFC600"/>
+<path d="M41.3409 6.33728L37.0894 9.85925L38.3402 15.5833L34.2092 12.1252L29.8122 15.3993L31.511 9.73926L27.5449 6.03931L32.7254 5.99927L34.672 0.438354L36.1752 6.07434L41.3409 6.33728Z" fill="#FFC600"/>
+<path d="M13.8922 6.33728L9.64072 9.85925L10.8915 15.5833L6.76051 12.1252L2.36348 15.3993L4.06228 9.73926L0.0961914 6.03931L5.27665 5.99927L7.22331 0.438354L8.7265 6.07434L13.8922 6.33728Z" fill="#FFC600"/>
+<path d="M96.2418 6.33728L91.9904 9.85925L93.2411 15.5833L89.1102 12.1252L84.7131 15.3993L86.4119 9.73926L82.4458 6.03931L87.6263 5.99927L89.5729 0.438354L91.0761 6.07434L96.2418 6.33728Z" fill="#FFC600"/>
+<path d="M123.692 6.33728L119.441 9.85925L120.692 15.5833L116.561 12.1252L112.164 15.3993L113.863 9.73926L109.896 6.03931L115.077 5.99927L117.024 0.438354L118.527 6.07434L123.692 6.33728Z" fill="#C1C8CE"/>
+</svg></div>
   <div className='flex'>
     <p className='price'>$299,43</p> <p className='p1'>$534,33</p><p className='p2'>24% Off</p></div>
           </div>

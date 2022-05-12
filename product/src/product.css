@@ -1,10 +1,16 @@
-
 .aa{ 
     margin-left: 5%; 
 } 
 .ab{ 
-   margin-left: 2%; 
+   margin-left: 2%;
+   display: flex;
+   justify-content: space-between;
+   background-color: white;
+   
 } 
+.en{
+    color: black; 
+}
 .bc{ 
    margin-left: 60%; 
 } 
@@ -28,10 +34,14 @@
     color: rgb(22, 175, 218); 
     margin-left: 35%; 
     font-weight: bold; 
+    text-decoration: none;
 } 
 .bc5{ 
     margin-left: 7%; 
     font-weight: bold; 
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
 }
 .title{
     justify-content: center;
@@ -213,7 +223,7 @@ font-weight: bolder;
 .im{
     height: 290px;
     width: 300px;
-    border-radius: 15px;
+    border-radius:5px;
     border: 1px solid black;
     
 }
@@ -272,16 +282,19 @@ font-weight: bolder;
     margin-left:24%;
     display:flex;
     flex-wrap: wrap;
-    
 }
 .h{
     border: 1px solid black;
     margin: 10px 260px 10px 0px;
-    background-color: red;
+    background-color:#FF4858;
     color: white;
    position: absolute;
    margin-top: -290px;
+   padding: 4px;
    padding-right: 10px;
+   padding-left: 15px;
+   margin-left:1px;
+   border-radius: 2px;
 }
 .menu{
     color: aqua;
@@ -400,4 +413,15 @@ margin-top: 100px;
     display: flex;
     justify-content: space-between
 }
-
+.item-nav{
+    display: flex;
+    align-items: center;
+}
+.name{
+    background-color: white;
+}
+.t1{
+    font-weight: bolder;
+    font-size: larger;
+     text-align: center;
+}
